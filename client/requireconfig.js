@@ -10,10 +10,12 @@ require.config({
         'handlebars': 'bower_components/handlebars/handlebars',
         'underscore': 'bower_components/underscore/underscore',
         'backbone': 'bower_components/backbone/backbone',
-        'backbone.wreqr': 'bower_components/backbone.wreqr/lib/backbone.wreqr'
+        'backbone.wreqr': 'bower_components/backbone.wreqr/lib/backbone.wreqr',
         'backbone.babysitter': 'bower_components/backbone.babysitter/lib/backbone.babysitter',
         'marionette': 'bower_components/marionette/lib/backbone.marionette',
-
+        'bootstrap_theme_css': 'bower_components/bootstrap/dist/css/bootstrap-theme',
+        'bootstrap_css': 'bower_components/bootstrap/dist/css/bootstrap',
+        'bootstrap': 'bower_components/bootstrap/dist/js/bootstrap'
 
     },
     shim: {
@@ -33,6 +35,9 @@ require.config({
         'marionette': {
             exports: 'Marionette',
             deps: ['backbone', 'backbone.babysitter', 'backbone.wreqr']
+        },
+        'bootstrap': {
+            deps: ['jquery', 'css!bootstrap_css', 'css!bootstrap_theme_css']
         }
     }
 });

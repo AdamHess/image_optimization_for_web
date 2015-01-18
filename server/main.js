@@ -9,7 +9,7 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 
 //serve up static assets 
-app.use(express.static(path.resolve('./public')));
+
 //adds logger to console 
 app.use(expressWinston.logger({
     transports: [
@@ -23,16 +23,14 @@ app.use(expressWinston.logger({
     expressFormat: true,
     colorStatus: false
 }));
-
+app.use(express.static(path.resolve('./client/')));
 
 app.use(bodyParser.json());
 
 
 // sets the route / to basically be index.html 
 app.get('/', function(req, res) {
-    res.sendFile(path.resolve('../client/index.html'));
-});
-
+    res.sendFile(path.resolve('./client/index.html'));
 });
 
 app.listen(app.get('port'), function() {

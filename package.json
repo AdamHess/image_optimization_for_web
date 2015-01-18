@@ -2,9 +2,10 @@
   "name": "image_optimization_for_web",
   "version": "1.0.0",
   "description": "a website for handling web image optimization techniques ",
-  "main": "./server/index.js",
+  "main": "server/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/main"
   },
   "keywords": [
     "image",
